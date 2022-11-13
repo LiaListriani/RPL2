@@ -70,8 +70,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btn_save" min="-2" pref="73" max="-2" attributes="0"/>
-                          <Component id="btn_delete" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="btn_delete" pref="73" max="32767" attributes="0"/>
+                          <Component id="btn_save" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -119,8 +119,8 @@
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="btn_save" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="btn_update" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btn_save" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -166,24 +166,20 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtHarga">
     </Component>
-    <Component class="javax.swing.JButton" name="btn_save">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Save"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_saveActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="btn_update">
       <Properties>
         <Property name="text" type="java.lang.String" value="Update"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_updateMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn_delete">
       <Properties>
         <Property name="text" type="java.lang.String" value="Delete"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_deleteMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_deleteActionPerformed"/>
       </Events>
     </Component>
@@ -192,6 +188,7 @@
         <Property name="text" type="java.lang.String" value="Clear"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_clearMouseClicked"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_clearActionPerformed"/>
       </Events>
     </Component>
@@ -213,6 +210,9 @@
               </Table>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblBungaMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -223,6 +223,14 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Toko Bunga"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_save">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Save"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn_saveMouseClicked"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
